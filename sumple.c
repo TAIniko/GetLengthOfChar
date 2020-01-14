@@ -1,5 +1,7 @@
 /* ex72.cpp  */
 #include <stdio.h>
+#include <string.h>
+
 int main(void)
 {
   int i, ct = 0;
@@ -8,12 +10,19 @@ int main(void)
   scanf("%s", c);
 
   printf("“ü—Í‚³‚ê‚½•¶Žš—ñ‚Í%s‚Å‚·\n", c);
-  for (i = 0; i < 256; i++)
-  {
-    if (c[i] != 0)
-      ct = ct + 1;
 
-    printf("“ü—Í‚³‚ê‚½•¶Žš”‚Í%d‚Å‚·B\n", ct);
-  }
+  // ŽÀsŒ‹‰Ê
+  // •¶Žš‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:
+  //   ‚±‚ñ‚É‚¿‚Í
+  //   “ü—Í‚³‚ê‚½•¶Žš—ñ‚Í‚±‚ñ‚É‚¿‚Í‚Å‚·
+
+  ct = strlen(c);
+  // for (i = 0; i < 256; i++)
+  // {
+  //   if (c[i] != 0)
+  //     ct = ct + 1;
+
+  printf("“ü—Í‚³‚ê‚½•¶Žš”‚Í%d‚Å‚·B\n", ct);
+  // }
   return 0;
 }
